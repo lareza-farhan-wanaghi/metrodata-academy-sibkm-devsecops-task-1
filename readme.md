@@ -26,7 +26,7 @@ Create a database, import data tables into the database, and perform various que
 ### 1. Creating the Environment
 **1.1 Create a Codespace Virtual Machine**
 1. Visit the [Codespace webpage](https://github.com/codespaces).
-2. Click "Use this template" to set up a project.
+2. Click "Use this template" on the blank option to set up a project.
 
    <img src="_resources/Screenshot%202023-08-28%20at%2009.48.44.png" width="75%"/>
 
