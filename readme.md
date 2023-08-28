@@ -31,7 +31,7 @@ Create a database, import data tables into the database, and perform various que
    <img src="_resources/Screenshot%202023-08-28%20at%2009.48.44.png" width="75%"/>
 
 **1.2 Preparing the Database**
-1. On the Codespace VM, install MySQL
+1. On the Codespace VM, install MySQL.
    ```bash
    sudo apt update
    sudo apt install mysql-server
@@ -41,22 +41,22 @@ Create a database, import data tables into the database, and perform various que
 
    <img src="_resources/Screenshot%202023-08-28%20at%2009.58.35.png" width="75%"/>
 
-3. Connect to MySQL server
+3. Connect to MySQL server.
    ```bash
    sudo mysql -u root
    ```
 
-4. Create a new database
+4. Create a new database.
    ```sql
    CREATE DATABASE HR;
    ```
 
-5. Switch to the new database
+5. Switch to the new database.
    ```sql
    USE HR;
    ```
 
-6. Import data using the uploaded `.sql` file
+6. Import data using the uploaded `.sql` file.
    ```sql
    source /path/to/data.sql;
    ```
