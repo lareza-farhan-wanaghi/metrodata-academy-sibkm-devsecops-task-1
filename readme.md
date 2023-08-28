@@ -63,14 +63,14 @@ Create a database, import data tables into the database, and perform various que
 
 ### 2. Solving the Problems
 **2.1 Solving the First Section of Objectives**
-1. Display all data in the employee table
+1. Display all data in the employee table.
    ```sql
    SELECT * FROM employee;
    ```
    
    <img src="_resources/Screenshot%202023-08-28%20at%2010.40.26.png" width="75%"/>
 
-2. Display data in the employee table with a salary greater than or equal to 7000
+2. Display all data in the employee table with a salary greater than or equal to 7000.
    ```sql
    SELECT * FROM employee 
    WHERE salary >= 7000;
@@ -78,7 +78,7 @@ Create a database, import data tables into the database, and perform various que
 
    <img src="_resources/Screenshot%202023-08-28%20at%2010.41.48.png" width="75%"/>
 
-3. Display data in the employee table where the name contains 'a', sorted by first_name
+3. Display data in the employee table where the name (first name / last name) contains the character 'a', sorted by first_name.
    ```sql
    SELECT * FROM employee 
    WHERE first_name LIKE '%a%' 
@@ -88,7 +88,7 @@ Create a database, import data tables into the database, and perform various que
    
    <img src="_resources/Screenshot%202023-08-28%20at%2010.44.32.png" width="75%"/>
 
-4. Display all data for employees who started before 2005, sorted by hire_date
+4. Display all data in the employee table for employees who started working before the year 2005, sorted by hire_date from the most recent.
    ```sql
    SELECT * FROM employee 
    WHERE YEAR(hire_date) < 2005
@@ -97,7 +97,7 @@ Create a database, import data tables into the database, and perform various que
 
    <img src="_resources/Screenshot%202023-08-28%20at%2010.45.45.png" width="75%"/>
 
-5. Display data with aliases for first_name as "Employee" and salary as "Monthly Salary" for specific conditions
+5. Display data for first_name as "Employee" and salary as "Monthly Salary" in the employee table for those with salaries between 5000 - 12000 and department_id 20 and 50.
    ```sql
    SELECT first_name AS 'Employee', 
       salary AS 'Monthly Salary'
@@ -109,12 +109,12 @@ Create a database, import data tables into the database, and perform various que
    <img src="_resources/Screenshot%202023-08-28%20at%2010.57.59.png" width="75%"/>
 
 **2.2 Solving the Second Section of Objectives**
-1. Display aggregated salary information grouped by job_id
+1. Display the Maximum salary, Minimum salary, total salary, average employee salary (rounded to 2 decimal places), and group them by job.
    ```sql
    SELECT job,
-       ROUND(MAX(salary), 2) AS Maximum_Salary,
-       ROUND(MIN(salary), 2) AS Minimum_Salary,
-       ROUND(SUM(salary), 2) AS Total_Salary,
+       MAX(salary) AS Maximum_Salary,
+       MIN(salary) AS Minimum_Salary,
+       SUM(salary) AS Total_Salary,
        ROUND(AVG(salary), 2) AS Average_Salary
    FROM employee
    GROUP BY job;
@@ -122,7 +122,7 @@ Create a database, import data tables into the database, and perform various que
 
    <img src="_resources/Screenshot%202023-08-28%20at%2010.57.00.png" width="75%"/>
 
-2. Display the highest and lowest salaries of "Shipping" department employees
+2. Display the highest and lowest salaries of employees working in the "Shipping" department.
    ```sql
    SELECT MAX(salary) AS Highest_Salary, MIN(salary) AS Lowest_Salary
    FROM employee
@@ -135,7 +135,7 @@ Create a database, import data tables into the database, and perform various que
 
    <img src="_resources/Screenshot%202023-08-28%20at%2011.00.26.png" width="75%"/>
 
-3. Display manager information with minimum employee salary constraints
+3. Display manager ID, manager name, and minimum salary for managers with a minimum employee salary greater than or equal to $6,000, ordered by the minimum employee salary.
    ```sql
    SELECT e.manager AS Manager_Id,
        CONCAT(m.first_name, ' ', m.last_name) AS Manager_Name,
@@ -150,7 +150,7 @@ Create a database, import data tables into the database, and perform various que
 
    <img src="_resources/Screenshot%202023-08-28%20at%2011.05.18.png" width="75%"/>
 
-4. Display employees with salary above average employee salary
+4. Display all employees who have a salary above the average employee salary.
    ```sql
    SELECT *
    FROM employee
@@ -163,7 +163,7 @@ Create a database, import data tables into the database, and perform various que
    <img src="_resources/Screenshot%202023-08-28%20at%2011.44.21.png" width="75%"/>
 
 **2.3 Solving the Third Section of Objectives**
-1. Display country, country name, and region name
+1. Display country.id, country.name, and region.name.
    ```sql
    SELECT c.id AS Country_Id, 
       c.name AS Country_Name, 
@@ -174,7 +174,7 @@ Create a database, import data tables into the database, and perform various que
 
    <img src="_resources/Screenshot%202023-08-28%20at%2011.50.49.png" width="75%"/>
 
-2. Display employee information with job and department details
+2. Display employee.first_name, employee.last_name, job.title, and department.name.
    ```sql
    SELECT e.first_name AS First_Name, 
       e.last_name AS Last_Name, 
@@ -187,7 +187,7 @@ Create a database, import data tables into the database, and perform various que
 
    <img src="_resources/Screenshot%202023-08-28%20at%2011.57.21.png" width="75%"/>
 
-3. Display employee names and their respective managers' names
+3. Display employee.first_name, employee.last_name (subordinate), and manager.first_name as "Manager" for each manager.
    ```sql
    SELECT e.first_name AS First_Name,
        e.last_name AS Last_Name,
