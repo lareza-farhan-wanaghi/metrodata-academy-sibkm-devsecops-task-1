@@ -31,7 +31,7 @@ Create a database, import data tables into the database, and perform various que
    <img src="_resources/Screenshot%202023-08-28%20at%2009.48.44.png" width="75%"/>
 
 **1.2 Preparing the Database**
-1. Install MySQL
+1. On the Codespace VM, install MySQL
    ```bash
    sudo apt update
    sudo apt install mysql-server
