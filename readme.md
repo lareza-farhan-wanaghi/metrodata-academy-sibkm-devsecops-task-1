@@ -10,7 +10,7 @@ Create a database, import data tables into the database, and perform various que
 - Displaying all data in the employee table for employees who started working before the year 2005, sorted by hire_date from the most recent.<br/>
 - Displaying data for first_name as "Employee" and salary as "Monthly Salary" in the employee table for those with salaries between 5000 - 12000 and department_id 20 and 50.
 
-### 2. Create Queries (Group Functions):
+### 2. Create Queries (Group Functions) for:
 - Displaying the Maximum salary, Minimum salary, total salary, average employee salary (rounded to 2 decimal places), and group them by job_id.<br/>
 - Displaying the highest and lowest salaries of employees working in the "Shipping" department.<br/>
 - Displaying manager ID, manager name, and minimum salary for managers with a minimum employee salary greater than or equal to $6,000, ordered by the minimum employee salary.<br/>
