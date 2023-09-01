@@ -1,6 +1,6 @@
 # Metrodata Academy SIBKM DevSecOps Task 1: Querying a MySQL Database
 
-## Objective
+## Problem Statement
 Create a database, import data tables into the database, and perform various queries from these three objective sections below:
 
 ### 1. Create Queries for:
