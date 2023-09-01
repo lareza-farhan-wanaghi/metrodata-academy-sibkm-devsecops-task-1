@@ -1,6 +1,6 @@
 # Metrodata Academy SIBKM DevSecOps Task 1: Querying a MySQL Database
 
-## Objectives
+## Objective
 Create a database, import data tables into the database, and perform various queries from these three objective sections below:
 
 ### 1. Create Queries for:
@@ -21,7 +21,7 @@ Create a database, import data tables into the database, and perform various que
 - Displaying employee.first_name, employee.last_name, job.title, and department.name.<br/>
 - Displaying employee.first_name, employee.last_name (subordinate), and manager.first_name as "Manager" for each manager.
 
-## Resolutions
+## Solution
 
 ### 1. Creating the Environment
 **1.1 Create a Codespace Virtual Machine**
